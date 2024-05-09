@@ -13,6 +13,7 @@ const pageCache = new CacheFirst({
     new CacheableResponsePlugin({
       statuses: [0, 200],
     }),
+    // This is so the cache plugin expires at 30 days
     new ExpirationPlugin({
       maxAgeSeconds: 30 * 24 * 60 * 60,
     }),
